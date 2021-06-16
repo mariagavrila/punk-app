@@ -1,0 +1,9 @@
+<div class="container">
+<form>
+  <mat-form-field class="full-width">
+    <mat-label>Enter a food</mat-label>
+    <input matInput [(ngModel)]="search" name="search" (input)="loadRecipes()">
+    <mat-icon matSuffix (click)="loadRecipes()" class="icon">search</mat-icon>
+  </mat-form-field>
+</form>
+<recipe-list [recipes]="recipes"></recipe-list>
